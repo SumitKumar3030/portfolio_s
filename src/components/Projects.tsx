@@ -77,6 +77,18 @@ const projects: Project[] = [
     github: "https://github.com/SumitKumar3030",
     images: ["/weatherApp.png"],
     featured: false,
+  },
+  {
+    title: "System",
+    shortDescription:
+      "A backend-heavy application focused on bidirectional communication and session state persistence.",
+    fullDescription:
+      "A backend-heavy application focused on bidirectional communication and session state persistence using Express and Socket.io. Features real-time event broadcasting, room-based session isolation, reconnection handling, and a PostgreSQL-backed state store. Built to handle hundreds of concurrent sessions with sub-100ms latency.",
+    tech: ["Express", "Node.js", "Socket.io", "PostgreSQL"],
+    link: "https://demo.com",
+    github: "https://github.com/SumitKumar3030",
+    images: ["/weatherApp.png"],
+    featured: false,
   }
 ];
 
