@@ -14,6 +14,7 @@ type Project = {
   link: string;
   github: string;
   images: string[];
+  video?: string;
   featured: boolean;
 };
 
@@ -28,6 +29,20 @@ const projects: Project[] = [
     link: "https://student-mentor-app.vercel.app/",
     github: "https://github.com/SumitKumar3030",
     images: ["/student_mentor.png", "/project1b.png", "/project1c.png"],
+    video: "https://www.loom.com/share/0e3f1b8c5a2b4f9e8c1d2e3f4a5b6c7d",
+    featured: true,
+  },
+  {
+    title: "Document Signature Application",
+    shortDescription:
+      "A full-stack application for digitally signing documents with a focus on security and compliance.",
+    fullDescription:
+      "Built a full-stack document signature application that allows users to upload, view, and sign documents digitally. Implemented secure signature generation using cryptographic libraries and integrated with a RESTful API for seamless document management. The application ensures compliance with digital signature standards and provides an intuitive user interface for managing signed documents.",
+    tech: ["Next.js", "Node.js", "Express", "CryptoJS", "Tailwind CSS"],
+    link: "https://student-mentor-app.vercel.app/",
+    github: "https://github.com/SumitKumar3030",
+    images: ["/student_mentor.png", "/project1b.png", "/project1c.png"],
+    video: "https://www.loom.com/share/0e3f1b8c5a2b4f9e8c1d2e3f4a5b6c7d",
     featured: true,
   },
   {
@@ -63,7 +78,7 @@ const projects: Project[] = [
     tech: ["Express", "Node.js", "Socket.io", "PostgreSQL"],
     link: "https://demo.com",
     github: "https://github.com/SumitKumar3030",
-    images: ["/weatherApp.png"],
+    images: ["/redditClone.png"],
     featured: false,
   },
   {
@@ -79,7 +94,7 @@ const projects: Project[] = [
     featured: false,
   },
   {
-    title: "System",
+    title: "Speech-to-Text Application",
     shortDescription:
       "A backend-heavy application focused on bidirectional communication and session state persistence.",
     fullDescription:
@@ -87,7 +102,7 @@ const projects: Project[] = [
     tech: ["Express", "Node.js", "Socket.io", "PostgreSQL"],
     link: "https://demo.com",
     github: "https://github.com/SumitKumar3030",
-    images: ["/weatherApp.png"],
+    images: ["/speechToText.png"],
     featured: false,
   }
 ];
