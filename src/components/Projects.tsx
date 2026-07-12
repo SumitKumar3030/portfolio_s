@@ -39,7 +39,7 @@ const projects: Project[] = [
     fullDescription:
       "Built a full-stack document signature application that allows users to upload, view, and sign documents digitally. Implemented secure signature generation using cryptographic libraries and integrated with a RESTful API for seamless document management. The application ensures compliance with digital signature standards and provides an intuitive user interface for managing signed documents.",
     tech: ["Next.js", "Node.js", "Express", "CryptoJS", "Tailwind CSS"],
-    link: "https://student-mentor-app.vercel.app/",
+    link: "https://document-signature-app-jet.vercel.app/",
     github: "https://github.com/SumitKumar3030",
     images: ["/student_mentor.png", "/project1b.png", "/project1c.png"],
     video: "https://www.loom.com/share/0e3f1b8c5a2b4f9e8c1d2e3f4a5b6c7d",
@@ -55,6 +55,18 @@ const projects: Project[] = [
     link: "https://ai-data-analyst-dashboard-sigma.vercel.app/",
     github: "https://github.com/SumitKumar3030/ai-data-analyst-dashboard",
     images: ["/ai_dataAnalyst.png", "/project2b.png"],
+    featured: false,
+  },
+  {
+    title: "CRUD",
+    shortDescription:
+      "Simple CRUD : Create, Read, Update, Delete operations with a clean and intuitive interface.",
+    fullDescription:
+      "A simple CRUD application with a clean and intuitive interface for managing data. Built with modern web technologies for a seamless user experience.",
+    tech: ["Next.js", "Node.js", "Express", "MongoDB"],
+    link: "https://crud-app.vercel.app/",
+    github: "https://github.com/SumitKumar3030/crud-app",
+    images: ["/crud.png", "/project2b.png"],
     featured: false,
   },
   {
