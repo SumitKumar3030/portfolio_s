@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 
 const navLinks = [
   { label: "Skills", href: "#skills" },
@@ -33,12 +34,12 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a
-          href="#"
+        <Link
+          href="/"
           className="font-mono text-sm font-bold text-white tracking-widest hover:text-crimson transition-colors"
         >
           SK<span className="text-crimson">.</span>
-        </a>
+        </Link>
 
         {/* Links */}
         <div className="hidden md:flex items-center gap-8">
@@ -57,6 +58,7 @@ export default function Navbar() {
         <a
           href="/Resume_Sumitkumar.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-sm font-semibold text-crimson border border-crimson/40 hover:bg-crimson hover:text-white px-4 py-1.5 rounded-full transition-all duration-200"
         >
           Resume
