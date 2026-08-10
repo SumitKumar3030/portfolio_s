@@ -29,7 +29,7 @@ const projects: Project[] = [
     link: "https://student-mentor-app.vercel.app/",
     github: "https://github.com/SumitKumar3030",
     images: ["/student_mentor.png", "/project1b.png", "/project1c.png"],
-    video: "https://www.loom.com/share/0e3f1b8c5a2b4f9e8c1d2e3f4a5b6c7d",
+    video: "",
     featured: true,
   },
   {
