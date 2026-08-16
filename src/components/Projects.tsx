@@ -46,6 +46,18 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: "TaskFlow - Team Task Manager",
+    shortDescription:
+      "A full-stack team collaboration app with real-time drag-and-drop task boards, workspaces, and role-based access.",
+    fullDescription:
+      "Built a full-stack task management platform where teams create workspaces, invite members by email, organize work into projects, and manage tasks on a real-time drag-and-drop Kanban board. Implemented JWT-based authentication with email OTP verification, role-based workspace permissions (admin/member), and an activity audit log that tracks every task status change and assignment. The board uses @dnd-kit for smooth drag-and-drop with optimistic UI updates synced to MongoDB, and transactional emails (invites, OTP, password reset) are sent via the Brevo API.",
+    tech: ["Next.js", "Node.js", "Express", "MongoDB", "JWT", "@dnd-kit", "Tailwind CSS"],
+    link: "https://task-manager-sepia-theta-48.vercel.app/",
+    github: "https://github.com/SumitKumar3030",
+    images: ["/taskflow1.png", "/taskflow2.png", "/taskflow3.png", "/taskflow4.png", "/taskflow5.png"],
+    featured: true,
+},
+  {
     title: "AI Data Analyst Dashboard",
     shortDescription:
       "Full-stack AI dashboard that lets users query CSV data in natural language and automatically generates interactive charts.",
