@@ -76,9 +76,9 @@ const projects: Project[] = [
     fullDescription:
       "A simple CRUD application with a clean and intuitive interface for managing data. Built with modern web technologies for a seamless user experience.",
     tech: ["Next.js", "Node.js", "Express", "MongoDB"],
-    link: "https://crud-app.vercel.app/",
-    github: "https://github.com/SumitKumar3030/crud-app",
-    images: ["/crud.png", "/project2b.png"],
+    link: "https://crud-rho-flax.vercel.app/",
+    github: "https://github.com/SumitKumar3030/crud",
+    images: ["/crud1.png"],
     featured: false,
   },
   {
@@ -89,7 +89,7 @@ const projects: Project[] = [
       "A backend-heavy application focused on bidirectional communication and session state persistence using Express and Socket.io. Features real-time event broadcasting, room-based session isolation, reconnection handling, and a PostgreSQL-backed state store. Built to handle hundreds of concurrent sessions with sub-100ms latency.",
     tech: ["Express", "Node.js", "Socket.io", "PostgreSQL"],
     link: "https://demo.com",
-    github: "https://github.com/SumitKumar3030",
+    github: "https://github.com/SumitKumar3030/meterflow",
     images: ["/meterflow.png"],
     featured: false,
   },
@@ -100,9 +100,9 @@ const projects: Project[] = [
     fullDescription:
       "A backend-heavy application focused on bidirectional communication and session state persistence using Express and Socket.io. Features real-time event broadcasting, room-based session isolation, reconnection handling, and a PostgreSQL-backed state store. Built to handle hundreds of concurrent sessions with sub-100ms latency.",
     tech: ["Express", "Node.js", "Socket.io", "PostgreSQL"],
-    link: "https://demo.com",
-    github: "https://github.com/SumitKumar3030",
-    images: ["/redditClone.png"],
+    link: "https://reddit-clone-dusky-zeta.vercel.app/",
+    github: "https://github.com/SumitKumar3030/reddit-clone",
+    images: ["/reddit1.png","/reddit2.png","/reddit3.png","/reddit4.png"],
     featured: false,
   },
   {
@@ -112,9 +112,9 @@ const projects: Project[] = [
     fullDescription:
       "A backend-heavy application focused on bidirectional communication and session state persistence using Express and Socket.io. Features real-time event broadcasting, room-based session isolation, reconnection handling, and a PostgreSQL-backed state store. Built to handle hundreds of concurrent sessions with sub-100ms latency.",
     tech: ["Express", "Node.js", "Socket.io", "PostgreSQL"],
-    link: "https://demo.com",
-    github: "https://github.com/SumitKumar3030",
-    images: ["/weatherApp.png"],
+    link: "https://weather-now-liart-eta.vercel.app/",
+    github: "https://github.com/SumitKumar3030/weather-now",
+    images: ["/weatherApp.png", "/weatherApp1.png", "/weatherApp2.png"],
     featured: false,
   },
   {
@@ -125,7 +125,7 @@ const projects: Project[] = [
       "A backend-heavy application focused on bidirectional communication and session state persistence using Express and Socket.io. Features real-time event broadcasting, room-based session isolation, reconnection handling, and a PostgreSQL-backed state store. Built to handle hundreds of concurrent sessions with sub-100ms latency.",
     tech: ["Express", "Node.js", "Socket.io", "PostgreSQL"],
     link: "https://demo.com",
-    github: "https://github.com/SumitKumar3030",
+    github: "https://github.com/SumitKumar3030/speech-to-text-app",
     images: ["/speechToText.png"],
     featured: false,
   }
