@@ -106,6 +106,19 @@ const projects: Project[] = [
     featured: false,
   },
   {
+    title: "Frame Shift Website Demo",
+    shortDescription:
+      "Website demo for video editing company Frame Shift, showcasing their services and portfolio.",
+    fullDescription:
+      "Website demo for video editing company Frame Shift, showcasing their services and portfolio. Built with Next.js and TypeScript, featuring a responsive design, smooth animations, and interactive elements to enhance user engagement.",
+    tech: ["Next.js", "Node.js", "TypeScript"],
+    link: "https://frame-shift-demo.vercel.app/",
+    github: "https://github.com/SumitKumar3030/frame-shift-demo",
+    images: ["/framer1.png", "/framer2.png", "/framer3.png", "/framer4.png", "/framer5.png", "/framer6.png"],
+    video: "",
+    featured: true,
+  },
+  {
     title: "Weather-App",
     shortDescription:
       "A backend-heavy application focused on bidirectional communication and session state persistence.",
