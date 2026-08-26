@@ -41,7 +41,7 @@ const projects: Project[] = [
     tech: ["Next.js", "Node.js", "Express", "CryptoJS", "Tailwind CSS"],
     link: "https://document-signature-app-jet.vercel.app/",
     github: "https://github.com/SumitKumar3030",
-    images: ["/student_mentor.png", "/project1b.png", "/project1c.png"],
+    images: ["/doc1.png","/doc2.png","/doc3.png","/doc4.png","/doc5.png","/doc6.png"],
     video: "https://www.loom.com/share/0e3f1b8c5a2b4f9e8c1d2e3f4a5b6c7d",
     featured: true,
   },
