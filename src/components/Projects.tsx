@@ -106,6 +106,32 @@ const projects: Project[] = [
     featured: false,
   },
   {
+    title: "Forma Studio Website Demo",
+    shortDescription:
+      "Website demo for video editing company Frame Shift, showcasing their services and portfolio.",
+    fullDescription:
+      "Website demo for video editing company Frame Shift, showcasing their services and portfolio. Built with Next.js and TypeScript, featuring a responsive design, smooth animations, and interactive elements to enhance user engagement.",
+    tech: ["Next.js", "Node.js", "TypeScript"],
+    link: "https://forma-studio-opal.vercel.app/",
+    github: "https://github.com/SumitKumar3030/forma-studio",
+    images: ["/forma1.png", "/forma2.png"],
+    video: "",
+    featured: true,
+  },
+  {
+    title: "Mitti-Mocha Website Demo",
+    shortDescription:
+      "Website demo for video editing company Frame Shift, showcasing their services and portfolio.",
+    fullDescription:
+      "Website demo for video editing company Frame Shift, showcasing their services and portfolio. Built with Next.js and TypeScript, featuring a responsive design, smooth animations, and interactive elements to enhance user engagement.",
+    tech: ["Next.js", "Node.js", "TypeScript"],
+    link: "https://mitti-mocha.vercel.app/",
+    github: "https://github.com/SumitKumar3030/mitti-mocha",
+    images: ["mitti1.png", "mitti2.png", "mitti3.png", "mitti4.png"],
+    video: "",
+    featured: true,
+  },
+  {
     title: "Frame Shift Website Demo",
     shortDescription:
       "Website demo for video editing company Frame Shift, showcasing their services and portfolio.",
