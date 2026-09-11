@@ -76,7 +76,7 @@ const projects: Project[] = [
     fullDescription:
       "A full-stack PDF manipulation tool that allows users to create, edit, and share PDF documents. Built with a modern UI for an intuitive user experience.",
     tech: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    link: "https://pdfkit.vercel.app/",
+    link: "https://pdfkit-landing.vercel.app/",
     github: "https://github.com/SumitKumar3030/pdfkit",
     images: ["/pdfkit1.png", "/pdfkit2.png"],
     featured: false,
