@@ -4,11 +4,23 @@ import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
+   {
+    title: "Full Stack Developer Intern",
+    company: "VEloop",
+    location: "Remote",
+    duration: "September 2026 — Present",
+    type: "Current",
+    description: [
+      "Developed real-time collaborative features using Socket.io and Next.js.",
+      "Optimized database queries in Supabase, reducing load times by 30%.",
+      "Integrated Gemini AI for automated data tagging and analysis.",
+    ],
+  },
   {
     title: "Full Stack Developer Intern",
     company: "Labmentrix",
     location: "Remote",
-    duration: "March 2026 — Present",
+    duration: "March 2026 — June 2026",
     type: "Current",
     description: [
       "Developed real-time collaborative features using Socket.io and Next.js.",
