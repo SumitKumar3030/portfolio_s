@@ -21,7 +21,7 @@ const experiences = [
     company: "Labmentrix",
     location: "Remote",
     duration: "March 2026 — June 2026",
-    type: "Current",
+    type: "Completed",
     description: [
       "Developed real-time collaborative features using Socket.io and Next.js.",
       "Optimized database queries in Supabase, reducing load times by 30%.",
