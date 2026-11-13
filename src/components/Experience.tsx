@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const experiences = [
-   {
+  {
     title: "Full Stack Developer Intern",
     company: "VEloop",
     location: "Remote",
-    duration: "September 2026 — Present",
+    duration: "Sept 2026 — Present",
     type: "Current",
     description: [
       "Developed real-time collaborative features using Socket.io and Next.js.",
@@ -20,7 +20,7 @@ const experiences = [
     title: "Full Stack Developer Intern",
     company: "Labmentrix",
     location: "Remote",
-    duration: "March 2026 — June 2026",
+    duration: "Mar 2026 — Jun 2026",
     type: "Completed",
     description: [
       "Developed real-time collaborative features using Socket.io and Next.js.",
@@ -44,87 +44,62 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-24 px-6" id="experience">
+    <section className="py-24 px-6 max-w-6xl mx-auto" id="experience">
       {/* Header */}
       <div className="flex items-center gap-4 mb-16">
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight whitespace-nowrap">
-          Work <span className="text-crimson">Experience</span>
+          Where I have <span className="text-crimson">Worked</span>
         </h2>
         <div className="h-[1px] flex-1 bg-zinc-800" />
       </div>
 
-      <div className="relative max-w-3xl mx-auto">
-        {/* Static timeline track */}
-        <div className="absolute left-0 md:left-6 top-0 bottom-0 w-[2px] bg-zinc-800" />
-
-        {/* Animated fill */}
-        <motion.div
-          initial={{ height: 0 }}
-          whileInView={{ height: "100%" }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="absolute left-0 md:left-6 top-0 w-[2px] bg-gradient-to-b from-crimson via-crimson/50 to-transparent origin-top"
-        />
-
-        <div className="space-y-10 pl-10 md:pl-20">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: index * 0.15 }}
-              className="relative"
-            >
-              {/* Dot on timeline */}
-              <div className="absolute -left-[45px] md:-left-[55px] top-7 w-4 h-4 rounded-full border-2 border-crimson bg-black shadow-[0_0_12px_rgba(225,29,72,0.6)] z-10" />
-
-              {/* Card */}
-              <div className="bg-zinc-900/40 border border-zinc-800 hover:border-crimson/30 transition-all duration-300 rounded-2xl p-7 group">
-                {/* Top row */}
-                <div className="flex flex-wrap items-center justify-between gap-3 mb-1">
-                  <div className="flex items-center gap-2 text-crimson font-mono text-xs">
-                    <Calendar size={12} />
-                    {exp.duration}
-                  </div>
-                  <span
-                    className={`text-[10px] uppercase tracking-widest font-mono px-2.5 py-1 rounded-full border ${
-                      exp.type === "Current"
-                        ? "text-emerald-400 border-emerald-400/30 bg-emerald-400/10"
-                        : "text-zinc-500 border-zinc-700 bg-zinc-800/50"
-                    }`}
-                  >
-                    {exp.type}
+      <div className="flex flex-col gap-2">
+        {experiences.map((exp, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="group relative grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-12 border-b border-zinc-800/60 last:border-0 hover:bg-zinc-900/20 transition-colors rounded-2xl px-4 md:px-6 -mx-4 md:-mx-6"
+          >
+            
+            {/* Left Side: Date & Company (Spans 4 columns) */}
+            <div className="md:col-span-4 flex flex-col gap-1 md:pt-1">
+              <span className="text-sm font-mono text-crimson tracking-wider uppercase">
+                {exp.duration}
+              </span>
+              <span className="text-zinc-400 font-medium mt-1 flex items-center gap-2">
+                {exp.company}
+                {exp.type === "Current" && (
+                  <span className="flex h-2 w-2 relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
-                </div>
+                )}
+              </span>
+              <span className="text-zinc-600 text-sm">{exp.location}</span>
+            </div>
 
-                <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-crimson transition-colors mb-1">
-                  {exp.title}
-                </h3>
-
-                <div className="flex flex-wrap items-center gap-4 text-zinc-500 text-sm mb-5">
-                  <span className="flex items-center gap-1.5">
-                    <Briefcase size={13} />
-                    {exp.company}
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <MapPin size={13} />
-                    {exp.location}
-                  </span>
-                </div>
-
-                <ul className="space-y-2.5">
-                  {exp.description.map((bullet, i) => (
-                    <li key={i} className="text-zinc-500 text-sm flex gap-3 leading-relaxed">
-                      <span className="text-crimson font-bold mt-0.5 shrink-0">›</span>
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+            {/* Right Side: Role & Description (Spans 8 columns) */}
+            <div className="md:col-span-8 relative">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-crimson transition-colors flex items-center justify-between">
+                {exp.title}
+                <ArrowUpRight className="opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 text-crimson w-6 h-6 hidden md:block" />
+              </h3>
+              
+              <ul className="space-y-3">
+                {exp.description.map((bullet, i) => (
+                  <li key={i} className="text-zinc-400 text-sm md:text-base flex gap-3 leading-relaxed">
+                    <span className="text-zinc-600 mt-1.5 shrink-0 block w-1.5 h-1.5 rounded-full bg-zinc-700" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+          </motion.div>
+        ))}
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Code2, Star, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, Code2, Star, X, ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { useState, useCallback, useEffect } from "react";
@@ -56,7 +56,7 @@ const projects: Project[] = [
     github: "https://github.com/SumitKumar3030",
     images: ["/taskflow1.png", "/taskflow2.png", "/taskflow3.png", "/taskflow4.png", "/taskflow5.png"],
     featured: true,
-},
+  },
   {
     title: "AI Data Analyst Dashboard",
     shortDescription:
@@ -139,7 +139,7 @@ const projects: Project[] = [
     tech: ["Next.js", "Node.js", "TypeScript"],
     link: "https://mitti-mocha.vercel.app/",
     github: "https://github.com/SumitKumar3030/mitti-mocha",
-    images: ["mitti1.png", "mitti2.png", "mitti3.png", "mitti4.png"],
+    images: ["/mitti1.png", "/mitti2.png", "/mitti3.png", "/mitti4.png"],
     video: "",
     featured: true,
   },
@@ -283,7 +283,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         exit={{ opacity: 0, scale: 0.93, y: 24 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
         onClick={(e) => e.stopPropagation()}
-        className="relative bg-zinc-950 border border-zinc-800 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl shadow-black/60"
+        className="relative bg-zinc-950 border border-zinc-800 rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl shadow-black/60"
       >
         {/* Close */}
         <button
@@ -296,7 +296,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         <div className="p-6 md:p-8">
           <Carousel images={project.images} title={project.title} />
 
-          <div className="mt-6">
+          <div className="mt-8">
             {project.featured && (
               <span className="inline-flex items-center gap-1.5 text-xs font-mono text-crimson bg-crimson/10 border border-crimson/20 px-3 py-1 rounded-full mb-4">
                 <Star size={10} className="fill-crimson" />
@@ -304,23 +304,23 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
               </span>
             )}
 
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+            <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">
               {project.title}
             </h3>
 
-            <p className="text-zinc-400 leading-relaxed text-sm md:text-base mb-6">
+            <p className="text-zinc-400 leading-relaxed text-sm md:text-base mb-8">
               {project.fullDescription}
             </p>
 
             <div className="flex flex-wrap gap-2 mb-8">
               {project.tech.map((t) => (
-                <span key={t} className="text-[11px] uppercase tracking-tight bg-zinc-900 text-zinc-400 px-3 py-1.5 rounded-md border border-zinc-800">
+                <span key={t} className="text-[11px] uppercase tracking-tight bg-zinc-900 text-zinc-300 px-3 py-1.5 rounded-md border border-zinc-800">
                   {t}
                 </span>
               ))}
             </div>
 
-            <div className="flex gap-6 pt-4 border-t border-zinc-800">
+            <div className="flex gap-6 pt-6 border-t border-zinc-800">
               <a
                 href={project.github}
                 target="_blank"
@@ -334,7 +334,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-crimson hover:text-crimson/80 transition-colors font-medium"
+                className="flex items-center gap-2 text-sm text-crimson hover:text-white transition-colors font-medium"
               >
                 <ExternalLink size={14} />
                 Live Demo
@@ -350,140 +350,132 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
 // ─── Main ─────────────────────────────────────────────────────────
 export default function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
-  const [featured, ...rest] = projects;
+  
+  // Split into Featured and Other projects
+  const featuredProjects = projects.filter(p => p.featured);
+  const otherProjects = projects.filter(p => !p.featured);
 
   return (
-    <section className="py-24 px-6" id="projects">
-      <div className="flex items-center gap-4 mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight whitespace-nowrap">
-          Featured <span className="text-crimson">Projects</span>
+    <section className="py-24 px-6 max-w-7xl mx-auto" id="projects">
+      
+      {/* Header */}
+      <div className="flex items-center gap-6 mb-16">
+        <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white">
+          Selected <span className="text-crimson">Work</span>
         </h2>
         <div className="h-[1px] flex-1 bg-zinc-800" />
       </div>
 
-      {/* Featured — full width */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        onClick={() => setSelected(featured)}
-        className="group relative bg-zinc-900/30 border border-zinc-800 rounded-3xl overflow-hidden hover:border-crimson/40 transition-all duration-500 mb-10 grid md:grid-cols-2 cursor-pointer"
-      >
-        <div className="relative h-72 md:h-auto overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-crimson/10 to-zinc-900" />
-          <div className="absolute inset-0 bg-crimson/5 group-hover:bg-transparent transition-colors z-10" />
-          <Image
-            src={featured.images[0]}
-            alt={featured.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
-            onError={(e) => { e.currentTarget.style.display = "none"; }}
-          />
-          {featured.images.length > 1 && (
-            <div className="absolute top-4 left-4 z-20 bg-black/60 backdrop-blur border border-zinc-700 text-zinc-300 text-[10px] font-mono px-2.5 py-1 rounded-full flex items-center gap-1.5">
-              <Code2 size={10} />
-              {featured.images.length} screenshots
-            </div>
-          )}
-        </div>
-
-        <div className="p-10 flex flex-col justify-between">
-          <div>
-            <span className="inline-flex items-center gap-1.5 text-xs font-mono text-crimson bg-crimson/10 border border-crimson/20 px-3 py-1 rounded-full mb-5">
-              <Star size={10} className="fill-crimson" />
-              Featured Project
-            </span>
-            <h3 className="text-2xl font-bold text-white group-hover:text-crimson transition-colors mb-3">
-              {featured.title}
-            </h3>
-            <p className="text-zinc-400 leading-relaxed mb-6 text-sm line-clamp-3">
-              {featured.shortDescription}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {featured.tech.map((t) => (
-                <span key={t} className="text-[11px] uppercase tracking-tight bg-zinc-950 text-zinc-400 px-3 py-1.5 rounded-md border border-zinc-800 group-hover:border-crimson/20 transition-colors">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-          <p className="text-[11px] text-zinc-600 font-mono flex items-center gap-1.5 mt-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-crimson animate-pulse" />
-            Click to view details & screenshots
-          </p>
-        </div>
-      </motion.div>
-
-      {/* Rest — 2 col */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {rest.map((project, index) => (
+      {/* Featured Projects - Bento Box Style */}
+      <div className="flex flex-col gap-12 mb-24">
+        {featuredProjects.map((project, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.12 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             onClick={() => setSelected(project)}
-            className="group relative bg-zinc-900/30 border border-zinc-800 rounded-3xl overflow-hidden hover:border-crimson/40 transition-all duration-500 cursor-pointer"
+            className="group relative w-full rounded-[2rem] overflow-hidden border border-zinc-800/80 bg-zinc-900/20 cursor-pointer flex flex-col lg:flex-row hover:border-crimson/30 transition-colors duration-500"
           >
-            <div className="relative h-56 w-full overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-crimson/8 to-zinc-900" />
-              <div className="absolute inset-0 bg-crimson/5 group-hover:bg-transparent transition-colors z-10" />
+            {/* Image Section */}
+            <div className="relative w-full lg:w-[60%] h-72 lg:h-[450px] overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent z-10 lg:hidden" />
               <Image
                 src={project.images[0]}
                 alt={project.title}
                 fill
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                onError={(e) => { e.currentTarget.style.display = "none"; }}
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              {project.images.length > 1 && (
-                <div className="absolute top-3 left-3 z-20 bg-black/60 backdrop-blur border border-zinc-700 text-zinc-300 text-[10px] font-mono px-2 py-0.5 rounded-full">
-                  {project.images.length} screenshots
-                </div>
-              )}
-              <div className="absolute top-3 right-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="bg-black/60 backdrop-blur border border-crimson/30 p-2 rounded-full">
-                  <Code2 className="text-crimson w-4 h-4" />
-                </div>
+              <div className="absolute top-6 left-6 z-20 flex gap-2">
+                <span className="bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-medium px-4 py-2 rounded-full flex items-center gap-2">
+                  <Star size={12} className="text-crimson fill-crimson" /> Featured
+                </span>
               </div>
             </div>
 
-            <div className="p-7">
-              <div className="flex justify-between items-start mb-3">
-                <h3 className="text-xl font-bold text-white group-hover:text-crimson transition-colors pr-4">
-                  {project.title}
-                </h3>
-                <div className="flex gap-3 shrink-0">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="text-zinc-500 hover:text-white transition-all hover:scale-110">
-                    <GitHubLogoIcon className="w-5 h-5" />
-                  </a>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="text-zinc-500 hover:text-crimson transition-all hover:scale-110">
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-
-              <p className="text-zinc-400 text-sm mb-5 leading-relaxed line-clamp-2">
+            {/* Content Section */}
+            <div className="relative w-full lg:w-[40%] p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-zinc-900/50 to-black/50 z-20">
+              <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-crimson transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-zinc-400 leading-relaxed mb-8">
                 {project.shortDescription}
               </p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
+              
+              <div className="flex flex-wrap gap-2 mb-10">
                 {project.tech.map((t) => (
-                  <span key={t} className="text-[11px] uppercase tracking-tight bg-zinc-950 text-zinc-400 px-3 py-1.5 rounded-md border border-zinc-800 group-hover:border-crimson/20 transition-colors">
+                  <span key={t} className="text-xs font-medium bg-zinc-800/50 text-zinc-300 px-3 py-1.5 rounded-full border border-zinc-700/50">
                     {t}
                   </span>
                 ))}
               </div>
 
-              <p className="text-[11px] text-zinc-600 font-mono flex items-center gap-1.5">
-                <span className="w-1 h-1 rounded-full bg-crimson" />
-                Click to view details
+              <div className="flex items-center justify-between mt-auto">
+                <div className="flex gap-4">
+                  <a href={project.github} onClick={(e) => e.stopPropagation()} className="text-zinc-400 hover:text-white transition-colors">
+                    <GitHubLogoIcon className="w-5 h-5" />
+                  </a>
+                  <a href={project.link} onClick={(e) => e.stopPropagation()} className="text-zinc-400 hover:text-crimson transition-colors">
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+                <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center group-hover:bg-crimson transition-colors duration-300">
+                  <ArrowUpRight className="text-white w-5 h-5" />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Other Projects - Asymmetrical Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {otherProjects.map((project, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            onClick={() => setSelected(project)}
+            className="group relative bg-zinc-900/30 border border-zinc-800/80 rounded-2xl overflow-hidden hover:border-zinc-600 transition-all duration-300 cursor-pointer flex flex-col"
+          >
+            {/* Image */}
+            <div className="relative h-48 w-full overflow-hidden bg-zinc-950">
+              <Image
+                src={project.images[0]}
+                alt={project.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                onError={(e) => { e.currentTarget.style.display = "none"; }}
+              />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
+            </div>
+
+            {/* Content */}
+            <div className="p-6 flex flex-col flex-1">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-bold text-white group-hover:text-crimson transition-colors">
+                  {project.title}
+                </h3>
+              </div>
+              <p className="text-zinc-400 text-sm mb-6 line-clamp-2 flex-1">
+                {project.shortDescription}
               </p>
+              
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {project.tech.slice(0, 3).map((t) => (
+                  <span key={t} className="text-[10px] font-mono bg-zinc-800 text-zinc-400 px-2 py-1 rounded">
+                    {t}
+                  </span>
+                ))}
+                {project.tech.length > 3 && (
+                  <span className="text-[10px] font-mono bg-zinc-800 text-zinc-400 px-2 py-1 rounded">
+                    +{project.tech.length - 3}
+                  </span>
+                )}
+              </div>
             </div>
           </motion.div>
         ))}
