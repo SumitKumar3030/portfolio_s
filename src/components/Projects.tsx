@@ -26,7 +26,7 @@ const projects: Project[] = [
     fullDescription:
       "Built a full-stack real-time collaboration platform featuring a Monaco-based code editor, live chat, and peer-to-peer video calling using WebRTC. Implemented low-latency synchronization with Socket.IO and secure session management using Supabase, enabling seamless mentor-student interaction. Students join via a 6-digit session key, and mentors can create sessions and share code in real time with zero lag.",
     tech: ["Next.js", "Node.js", "Socket.io", "WebRTC", "Supabase", "TypeScript"],
-    link: "https://student-mentor-app.vercel.app/",
+    link: "https://student-mentor-platform-three.vercel.app/",
     github: "https://github.com/SumitKumar3030",
     images: ["/student_mentor.png", "/project1b.png", "/project1c.png"],
     video: "",
