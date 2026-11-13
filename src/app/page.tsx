@@ -8,7 +8,7 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <>
-    <main className="max-w-6xl mx-auto space-y-12 pb-20">
+      <main className="w-full max-w-6xl mx-auto pb-20 overflow-hidden">
       {/* Navbar */}
       <Navbar />
 
