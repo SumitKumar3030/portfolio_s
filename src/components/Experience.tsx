@@ -8,12 +8,12 @@ const experiences = [
     title: "Full Stack Developer Intern",
     company: "VEloop",
     location: "Remote",
-    duration: "Sept 2026 — Present",
+    duration: "Sept 2026 — October 2026",
     type: "Current",
     description: [
-      "Developed real-time collaborative features using Socket.io and Next.js.",
-      "Optimized database queries in Supabase, reducing load times by 30%.",
-      "Integrated Gemini AI for automated data tagging and analysis.",
+      "Developing and maintaining REST API endpoints and backend services for production features using Node.js and Express.js.",
+      "Building interactive browser-based games and responsive frontend interfaces with React.js, focusing on performance and UX.",
+      "Collaborating with cross-functional teams to ship full-stack features from design through deployment.",
     ],
   },
   {
@@ -23,9 +23,9 @@ const experiences = [
     duration: "Mar 2026 — Jun 2026",
     type: "Completed",
     description: [
-      "Developed real-time collaborative features using Socket.io and Next.js.",
-      "Optimized database queries in Supabase, reducing load times by 30%.",
-      "Integrated Gemini AI for automated data tagging and analysis.",
+      "Developed full-stack features for production web applications using Next.js, React, and Node.js, contributing to a codebase serving multiple concurrent users.",
+      "Designed and implemented 10+ secure REST API endpoints with JWT-based authentication, session handling, and role-based access control.",
+      "Collaborated on database schema design and backend architecture to support scalable, maintainable full-stack features.",
     ],
   },
   {

@@ -13,21 +13,21 @@ const skillCategories = [
   {
     title: "Frontend",
     icon: "🎨",
-    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Zustand", "Vite", "Framer Motion"],
     colSpan: "md:col-span-2",
     color: "group-hover:border-blue-500/50"
   },
   {
     title: "Backend",
     icon: "⚙️",
-    skills: ["Node.js", "Express", "Socket.io", "WebRTC", "PostgreSQL"],
+    skills: ["Node.js", "Express", "Socket.io", "WebRTC", "PostgreSQL", "JWT Authentication", "REST APIs", "Prisma ORM"],
     colSpan: "md:col-span-1",
     color: "group-hover:border-emerald-500/50"
   },
   {
     title: "Tools & AI",
     icon: "🤖",
-    skills: ["Gemini AI", "Supabase", "Git", "Docker", "Vercel"],
+    skills: ["Groq AI / Llama-3", "Gemini AI", "Supabase", "MongoDB", "Github", "Git", "Docker", "Vercel", "Render", "Postman"],
     colSpan: "md:col-span-1",
     color: "group-hover:border-crimson/50"
   },

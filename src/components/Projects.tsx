@@ -20,7 +20,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Mentor-Student Real-Time Collaboration Platform",
+    title: "PairPulse - Real-Time Collaboration Platform",
     shortDescription:
       "A full-stack real-time collaboration platform featuring a Monaco-based code editor, live chat, and peer-to-peer video calling using WebRTC.",
     fullDescription:
@@ -28,7 +28,7 @@ const projects: Project[] = [
     tech: ["Next.js", "Node.js", "Socket.io", "WebRTC", "Supabase", "TypeScript"],
     link: "https://student-mentor-platform-three.vercel.app/",
     github: "https://github.com/SumitKumar3030",
-    images: ["/student_mentor.png", "/project1b.png", "/project1c.png"],
+    images: ["/student_mentor.png", "/student_mentor1.png", "/student_mentor2.png"],
     video: "",
     featured: true,
   },
